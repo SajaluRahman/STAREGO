@@ -35,6 +35,7 @@ html.lenis, html.lenis body {
 @layer base {
   html {
     overflow-x: hidden;
+    color-scheme: dark;
   }
   body {
     background: var(--background);
@@ -231,10 +232,12 @@ html.lenis, html.lenis body {
   animation: shimmer 3s ease-in-out infinite;
 }
 
-/* ─── Performance: Contain snap sections ─── */
-.snap-section {
-  /* Isolate each section's paint so browser doesn't repaint siblings */
-  contain: paint;
+/* ─── Performance: Contain snap sections (desktop only) ─── */
+@media (min-width: 768px) {
+  .snap-section {
+    /* Isolate each section's paint so browser doesn't repaint siblings */
+    contain: paint;
+  }
 }
 
 /* ─── Accessibility: Kill all animations for users who prefer reduced motion ─── */

@@ -30,7 +30,7 @@ const Hero = () => {
   const orb2Y = useTransform(scrollYProgress, [0, 1], [0, -40]);
 
   return (
-    <section ref={sectionRef} id="home" className="relative h-screen flex items-center justify-center overflow-hidden snap-section">
+    <section ref={sectionRef} id="home" className="relative h-[100dvh] md:h-screen flex items-center justify-center overflow-clip snap-section">
       {/* Parallax Background with Scroll Zoom */}
       <motion.div 
         className="absolute inset-0 z-0"
